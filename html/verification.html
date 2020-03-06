@@ -35,13 +35,15 @@
     <div class="container">
       <h5>개인정보</h5>
       <form>
-        <div class="form-group">
-          <label for="name">이름</label>
-          <input type="text" class="form-control" id="name" placeholder="실명">
-        </div>
-        <div class="form-group">
-          <label for="id">주민등록번호</label>
-          <input type="text" class="form-control" id="id" placeholder="앞 8자리">
+        <div id="id-validation" novalidate>
+          <div class="form-group">
+            <label for="name">이름</label>
+            <input type="text" class="form-control" id="name" placeholder="실명">
+          </div>
+          <div class="form-group">
+            <label for="id">주민등록번호</label>
+            <input type="text" class="form-control" id="id" placeholder="앞 8자리">
+          </div>
         </div>
 
         <div class="form-group">
@@ -52,8 +54,8 @@
               <option value="1">One</option>
             </select>
           </div>
-          <div class="col-sm-6 input-group">
-            <input type="text" id="phone" class="form-control" placeholder="전화번호" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <div class="col-sm-6 input-group" id="phone-validation">
+            <input type="text" id="phone" class="form-control" placeholder="전화번호" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
             <div class="input-group-append">
               <button class="btn btn-outline-secondary" type="button" onclick="request()">인증요청</button>
             </div>
@@ -61,9 +63,9 @@
         </div>
         
         <div class="input-group">
-          <input type="text" class="form-control" value="684833" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <input type="text" class="form-control" value="684833">
           <div class="input-group-append">
-            <span class="input-group-text text-danger bg-white" id="basic-addon2">3:00</span>
+            <span class="input-group-text text-danger bg-white">3:00</span>
           </div>
         </div>
       </form>
@@ -73,13 +75,15 @@
       <button type="button" class="btn btn-primary btn-lg btn-block" onclick="next()">다음</button>
     </div>
 
-    <script type="text/javascript">
+    <script>
       function request() {
-        $('#phone').addClass('bg-danger');
+        var form = document.getElementById("phone-validation");
+        form.classList.add("was-validated");
       }
 
       function next() {
-        $('#name, #id').addClass('bg-success');
+        var form = document.getElementById("id-validation");
+        form.classList.add("was-validated");
       }
     </script>
   </body>
