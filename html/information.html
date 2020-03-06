@@ -11,16 +11,14 @@
     <title>home</title>
     </head>
   <body>
-    <div>
-      <ul class="nav justify-content-center">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">운용요약</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">설정</a>
-        </li>
-      </ul>
-    </div>
+    <ul class="nav nav-pills nav-justified">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">운용요약</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">설정</a>
+      </li>
+    </ul>
     
     <div class="container">
       <h5>계약정보</h5>
@@ -101,13 +99,5 @@
         </small>
       </p>
     </div>
-
-    <script>
-      $('ul.nav > li').click(function(e) {
-        e.preventDefault();
-        $('ul.nav > li').removeClass('active');
-        $(this).addClass('active');
-      });
-    </script>
   </body>
 </html>
