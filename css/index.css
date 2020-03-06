@@ -1,0 +1,14 @@
+.container {
+  margin-left: 36px;
+  margin-right: 36px;
+  padding: 0;
+  width: auto;
+}
+
+h2 {
+  margin-bottom: 40px;
+}
+
+.active {
+  color: #007bff !important;
+}
