@@ -75,13 +75,11 @@
 
     <script type="text/javascript">
       function request() {
-        phoneField = document.getElementById('phone');
-        phoneField.style.backgroundColor = "red";
+        $('#phone').addClass('bg-danger');
       }
 
       function next() {
-        document.getElementById('name').style.backgroundColor = "green";
-        document.getElementById('id').style.backgroundColor = "green";
+        $('#name, #id').addClass('bg-success');
       }
     </script>
   </body>
